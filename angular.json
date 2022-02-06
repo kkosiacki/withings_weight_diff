@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WithingsWeightDiff": {
+    "withings-weight-diff": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/WithingsWeightDiff",
+            "outputPath": "dist/withings-weight-diff",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WithingsWeightDiff:build"
+            "browserTarget": "withings-weight-diff:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "WithingsWeightDiff:build:production"
+              "browserTarget": "withings-weight-diff:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WithingsWeightDiff:build"
+            "browserTarget": "withings-weight-diff:build"
           }
         },
         "test": {
@@ -116,18 +116,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WithingsWeightDiff:serve"
+            "devServerTarget": "withings-weight-diff:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WithingsWeightDiff:serve:production"
+              "devServerTarget": "withings-weight-diff:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "WithingsWeightDiff",
+  "defaultProject": "withings-weight-diff",
   "cli": {
     "analytics": false
   }
