@@ -14,9 +14,9 @@ import { WithingsAuthService, WithingsMeasurment } from 'src/app/components/with
   <mat-card>
   <mat-card-content>
   <mat-selection-list #ms (selectionChange)="selectionChange($event)">
-    <mat-list-option [color]="measurment.getAttrib()==0 ? 'primary': 'warn'" *ngFor="let measurment of measurments" [value]="measurment">
+    <mat-list-option  [class.is-unknown]="measurment.getAttrib()==1" checkboxPosition="before" [color]="measurment.getAttrib()==0 ? 'primary': 'warn'" *ngFor="let measurment of measurments" [value]="measurment">
 
-    <h3 matLine> {{measurment.getValue()}} {{measurment.getAttrib()}} {{measurment.getAttrib()==0}}</h3>
+    <h3 matLine> {{measurment.getValue()}}</h3>
     <p matLine>
       <span> <b>{{measurment.getCreated() | date:'d LLL h:mm'}}</b> </span>
     </p>
@@ -28,7 +28,7 @@ import { WithingsAuthService, WithingsMeasurment } from 'src/app/components/with
   Options selected: {{ms.selectedOptions.selected.length}}
 </p>
   `,
-  styles: [],
+  styleUrls: ['./withings-callback.component.scss']
 })
 export class WithingsCallbackComponent implements OnInit, AfterViewInit {
   public text: string = 'Getting token...';

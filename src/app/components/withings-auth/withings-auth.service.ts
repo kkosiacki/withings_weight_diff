@@ -138,7 +138,7 @@ export class WithingsAuthService {
          console.log(JSON.stringify(mesuArray));
          mesuArray.forEach(meas => {
             let wm = new WithingsMeasurment();
-              wm.setAttrib(Math.random() >0.5 ? 0: 1);
+              wm.setAttrib(meas.attrib);
               wm.setCreated(meas.created);
               wm.setDate(meas.date);
               wm.setValue(meas.measures[0].value,meas.measures[0].unit);
